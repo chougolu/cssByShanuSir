@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Ecommerse Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav" >
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav" id="catrecord">
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+        <div class="row" id="cardData">
+
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="title" style="color: black;"> </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-4">ID</div>
+                            <div class="col-sm-6" id="ID"> </div>
+                            <div class="col-sm-4">CATEGORY</div>
+                            <div class="col-sm-6" id="category"> </div>
+                            <div class="col-sm-4">PRICE</div>
+                            <div class="col-sm-6" id="price"> </div>
+                            <div class="col-sm-4">DESCRIPTION</div>
+                            <div class="col-sm-6" id="description"> </div>
+                            <div class="col-sm-4">RATE</div>
+                            <div class="col-sm-6" id="rate"> </div>
+                            <div class="col-sm-4">COUNT</div>
+                            <div class="col-sm-6" id="count"> </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function allDataFun() {
+            let str = "";
+            let url = `https://fakestoreapi.com/products`
+            axios.get(url).then((resolve) => {
+                console.log(resolve.data);
+//                 resolve.data.forEach((items, index) => {
+//                     str += `<div class=col-sm-4 style="padding:10px"><div class="card" ">
+//   <img class="card-img-top" src="${items.image}" alt="Card image" style="height:300px;">
+//   <div class="card-body">
+//     <h4 class="card-title">${items.title.slice(0, 10)}...</h4>
+//     <p class="card-text">${items.description.slice(0, 50)} ...</p>
+//     <a href="#" class="btn btn-primary" id='${items}' onclick="openModal(this);" data-toggle="modal" data-target="#myModal">See Details</a>
+//   </div>
+// </div></div>`
+//                 })
+//                 document.getElementById("cardData").innerHTML = str;
+
+            })
+        }
+        allDataFun();
+
+        // Get all category
+        // function getAllCategory() {
+        //     let cat = '';
+        //     fetch('https://fakestoreapi.com/products/categories').then((res)=>{
+        //         return res.json();
+        //         //console.log(res);
+        //     }).then((catData)=>{
+        //         //console.log(catData);
+
+        //         catData.forEach((items, index)=>{
+        //             cat += `<li class="nav-item">
+        //             <a class="nav-link" href="#" onclick='searchCategory(this)'>${items}</a>
+        //         </li>`
+        //         });
+        //         // console.log(cat);
+        //         document.getElementById("catrecord").innerHTML = cat;
+        //     })
+        // }
+        // getAllCategory();
+
+        // function searchCategory(e){
+        //     let categoryName =  e.innerText;
+        //     fetch(`https://fakestoreapi.com/products/category/${categoryName}`).then((cnm)=>{
+        //         return cnm.json();
+        //     }).then(finalCatData=>{
+        //         console.log(finalCatData);
+        //     })
+        // }
+
+        function openModal(t) {
+            //console.log(t.id);
+            // let url = `https://fakestoreapi.com/products`
+            // axios.get(url).then((resolve) => {
+            //     let arr = [];
+            //     arr = resolve.data
+            //     // console.log(arr)
+            //     localStorage.setItem("arun", JSON.stringify(arr))
+            //     let singleData = resolve.data.filter((items, index) => {
+            //         return id == index
+            //     })
+            //     // console.log(singleData)
+            //     document.getElementById("title").innerHTML = singleData[0].title
+            //     document.getElementById("ID").innerHTML = singleData[0].id
+            //     document.getElementById("price").innerHTML = singleData[0].price
+            //     document.getElementById("category").innerHTML = singleData[0].category
+            //     document.getElementById("description").innerHTML = singleData[0].description
+            //     document.getElementById("rate").innerHTML = singleData[0].rating.rate
+            //     document.getElementById("count").innerHTML = singleData[0].rating.count
+
+            // })
+
+        }
+        let getData = localStorage.getItem("arun")
+        //console.log(getData)
+
+        function jwlFun() {
+            location = "jewelery.html"
+        }
+        function mensClothFun() {
+            location = "mens_cloth.html"
+        }
+        function ElectromicsFun() {
+            location = "electronics.html"
+        }
+        function WomenClothFun() {
+            location = "womens_cloth.html"
+        }
+    </script>
+</body>
+
+</html>

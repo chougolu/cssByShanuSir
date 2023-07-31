@@ -1,0 +1,53 @@
+.content-heading{
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #7f7f90;
+}
+.content-data{
+    font-size: 48px;
+    font-family: 'Amatic SC', cursive;
+}
+#banner-section{
+    background: url("recipe.jpg") no-repeat center center/cover;
+    height: 500px;
+    width: 100%;
+}
+#banner-section h1{
+    padding: 200px 0;
+    text-align: center;
+    color: #000;
+    font-size: 80px;
+}
+#chefs-section{
+    background: #eee;
+}
+.chefs-box{
+    position: relative;
+}
+#img-chefs{
+    position: absolute;
+    top: 272px;
+}
+/* menu section */
+#menu{}
+#menu img{
+    width: 60%;
+}
+.menu-items a{
+    text-decoration: none ;
+}
+.menu-items li{
+    padding: 10px;
+}
+.menu-items li:hover{
+    border-bottom: 1px solid red;
+}
+
+@media (max-width: 500px){
+    #banner-section h1{
+        font-size: 60px;
+    }
+}

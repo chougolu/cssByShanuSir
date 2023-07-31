@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudio element (before and after)</title>
+    <style>
+        h1{
+            background-color: black;
+            color: #fff;
+            width: 500px;
+            text-align: center;
+        }
+        h1::before{
+            content: "App Developement";
+            display: block;
+            background-color: brown;
+        }
+        h1::after{
+            content: "Web Designing";
+            display: block;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Web Developement</h1>
+</body>
+</html>

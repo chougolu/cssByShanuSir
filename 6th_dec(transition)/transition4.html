@@ -1,0 +1,84 @@
+<!-- 
+    transition : property-name duration timing-function delay 
+
+    timing-function : 
+    ease (default) : transition effect with a slow start, then fast, then end slowly (this is default)
+
+    linear : transition effect with the same speed from start to end
+
+    ease-in : specifies a transition effect with a slow start
+    ease-out :  specifies a transition effect with a slow end
+    ease-in-out :  specifies a transition effect with a slow start and end
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            overflow: hidden;
+            background-color: cadetblue;
+            margin: 50px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            
+           
+        }
+        h1{
+            background-color: black;
+            color: #fff;
+            position: absolute;
+            top: -100px;
+            width: 100%;
+            transition: all 0.5s linear;
+            
+        }
+        p{
+            position: absolute;
+            top: 206px;
+            text-align: center;
+            transition: all 0.5s linear;
+        }
+        
+        a{
+            background-color: black;
+            color: #fff;  
+            padding: 10px;
+            text-decoration: none;
+            position: absolute;
+            bottom: 10px;
+            opacity: 0;
+        }
+        .box:hover h1{
+            top: 20px;
+        }
+        .box:hover p{
+            top: 65px;
+        }
+        .box:hover a{
+            opacity: 1;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="box">
+        <h1>Heading</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas maxime sit distinctio ratione neque 
+        </p>
+        <a href="">Read More</a>
+    </div>
+ </body>
+ </html>

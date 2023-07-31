@@ -1,0 +1,70 @@
+
+Que) How to create react project ?
+
+npx create-react-app my-react-app
+cd my-react-app(cd-change directry)
+npm start
+localhost:3000
+npm-Node Package Manage
+npx- Node Package Execute
+
+-----------------------------------------------------------------
+Que) What is react js ?
+
+React is a JavaScript library created by Facebook. React js building user interfaces.
+React is used to build single-page applications.
+React allows us to create reusable UI components.
+
+-----------------------------------------------------------------
+Que) How does React Work ?
+
+React creates a VIRTUAL DOM in memory.
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+
+-----------------------------------------------------------------
+Que) React.JS History ?
+
+Current version of React.JS is V18.0.0 (April 2022).
+Initial Release to the Public (V0.3.0) was in July 2013.
+React.JS was first used in 2011 for Facebook's Newsfeed feature.
+Facebook Software Engineer, Jordan Walke, created it.
+Current version of create-react-app is v5.0.1 (April 2022).
+
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Crud proccess:-
+1 set data in local storage:-
+      form-->input-->getdata by document.getElementById()-->push in array(in object formet) with key and value pair --> array's data set in localstorage-->localStorage.setItem("data",JSON.stringify(array));
+
+2 delete data :-
+      localstorage data get --> condition != --> data-  array --> array.filter(!=)-->set array in localstorage.
+      (class --> lucky(1),chhaya(2),golu(3))
+
+      golu != chhaya,lucky
+
+
+
+
+
+
+
+
+
+
+
+
+
+

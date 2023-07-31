@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css custome animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: myanimation 10s linear;
+            animation-iteration-count: infinite;
+            /* animation-fill-mode: forwards; */
+            /* animation-direction: alternate; */
+        }
+        @keyframes myanimation {
+            0%{
+                margin-left: 0;
+                margin-top: 0;
+            }   
+            25%{
+                margin-left: 400px;
+                margin-top: 0;
+                background-color: brown;
+            }   
+            50%{
+                margin-left: 400px;
+                margin-top: 400px;
+                background-color: blue;
+            }   
+            75%{
+                margin-left: 0px;
+                margin-top: 400px;
+                background-color: chocolate;
+            }
+            100%{
+                margin-left: 0px;
+                margin-top: 0px;
+                background-color: fuchsia;
+            }
+        }
+        .box:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
